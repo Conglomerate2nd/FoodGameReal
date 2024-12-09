@@ -1,18 +1,89 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqiyoud7116di"]
+[gd_scene load_steps=24 format=3 uid="uid://bqiyoud7116di"]
 
-[ext_resource type="PackedScene" uid="uid://bety0mf6t3o80" path="res://platform.tscn" id="2_m5jai"]
-[ext_resource type="PackedScene" uid="uid://byswfomsas0tw" path="res://object.tscn" id="3_ljqwi"]
+[ext_resource type="PackedScene" uid="uid://c7o7mcyg02rk6" path="res://plate.tscn" id="1_07wq2"]
+[ext_resource type="PackedScene" uid="uid://3p8bno5s73eu" path="res://pot.tscn" id="2_hwsi1"]
+[ext_resource type="PackedScene" uid="uid://3hfd6vvecpfj" path="res://Food/American.tscn" id="3_qewt3"]
+[ext_resource type="PackedScene" uid="uid://dnt0l7g8ptihh" path="res://Food/BlackPepper.tscn" id="4_72n0t"]
+[ext_resource type="Script" path="res://Food/yellowCheese.gd" id="4_aja1s"]
+[ext_resource type="PackedScene" uid="uid://bdx53c34d3fxl" path="res://Food/Butter.tscn" id="5_ng7ws"]
+[ext_resource type="PackedScene" uid="uid://cxs1okst3cdyq" path="res://Food/Cayenne.tscn" id="6_0il5v"]
+[ext_resource type="Script" path="res://Food/Butter.gd" id="6_0kbp7"]
+[ext_resource type="PackedScene" uid="uid://bigccrh5uxt05" path="res://Food/Cheddar.tscn" id="7_pljnm"]
+[ext_resource type="PackedScene" uid="uid://dpu1yujeom0nh" path="res://Food/Cottage.tscn" id="8_b573s"]
+[ext_resource type="PackedScene" uid="uid://bflrhybkuo6xs" path="res://Food/Flour.tscn" id="9_enq7b"]
+[ext_resource type="PackedScene" uid="uid://ct6oypiyiku4x" path="res://Food/Milk.tscn" id="10_chkjo"]
+[ext_resource type="Script" path="res://Food/Flour.gd" id="10_x83o6"]
+[ext_resource type="Script" path="res://Food/whiteCheese.gd" id="11_2jbf5"]
+[ext_resource type="PackedScene" uid="uid://vehc0b6ki6da" path="res://Food/Mozzarella.tscn" id="11_fj2dv"]
+[ext_resource type="PackedScene" uid="uid://bfgmp08x45wdg" path="res://Food/Nutmeg.tscn" id="12_nvuwa"]
+[ext_resource type="PackedScene" uid="uid://d2bugf4u5dotc" path="res://Food/Paprika.tscn" id="13_nw353"]
+[ext_resource type="PackedScene" uid="uid://op82efvnjlie" path="res://Food/Pasta.tscn" id="14_hfm3m"]
+[ext_resource type="Script" path="res://Food/Milk.gd" id="15_poc74"]
+[ext_resource type="PackedScene" uid="uid://x07tuflm1xdk" path="res://Food/Ricotta.tscn" id="15_v5b5j"]
+[ext_resource type="PackedScene" uid="uid://c4fke2q7o34or" path="res://Food/Salt.tscn" id="16_yyh63"]
+[ext_resource type="PackedScene" uid="uid://31s0pjiws5gc" path="res://Food/WhiteCheddar.tscn" id="17_tehxt"]
+[ext_resource type="Script" path="res://Food/Pasta.gd" id="19_lylwv"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Platform" parent="." instance=ExtResource("2_m5jai")]
-position = Vector2(209, 370)
+[node name="Plate" parent="." instance=ExtResource("1_07wq2")]
+position = Vector2(586, 482)
 
-[node name="Platform2" parent="." instance=ExtResource("2_m5jai")]
-position = Vector2(581, 256)
+[node name="Pot" parent="." instance=ExtResource("2_hwsi1")]
+position = Vector2(1003, 354)
 
-[node name="Platform3" parent="." instance=ExtResource("2_m5jai")]
-position = Vector2(382, 128)
+[node name="American" parent="." groups=["Cheese"] instance=ExtResource("3_qewt3")]
+position = Vector2(77, 216)
+script = ExtResource("4_aja1s")
 
-[node name="Object" parent="." instance=ExtResource("3_ljqwi")]
-position = Vector2(94, 79)
+[node name="BlackPepper" parent="." groups=["Spice"] instance=ExtResource("4_72n0t")]
+position = Vector2(1082, 88)
+
+[node name="Butter" parent="." groups=["Butter"] instance=ExtResource("5_ng7ws")]
+position = Vector2(82, 365)
+script = ExtResource("6_0kbp7")
+
+[node name="Cayenne" parent="." groups=["Spice"] instance=ExtResource("6_0il5v")]
+position = Vector2(1077, 210)
+rotation = 4.71239
+
+[node name="Cheddar" parent="." groups=["Cheese"] instance=ExtResource("7_pljnm")]
+position = Vector2(210, 217)
+script = ExtResource("4_aja1s")
+
+[node name="Cottage" parent="." groups=["Cheese"] instance=ExtResource("8_b573s")]
+position = Vector2(80, 69)
+script = ExtResource("11_2jbf5")
+
+[node name="Flour" parent="." groups=["Flour"] instance=ExtResource("9_enq7b")]
+position = Vector2(213, 364)
+script = ExtResource("10_x83o6")
+
+[node name="Milk" parent="." groups=["Milk"] instance=ExtResource("10_chkjo")]
+position = Vector2(80, 496)
+script = ExtResource("15_poc74")
+
+[node name="Nutmeg" parent="." groups=["Spice"] instance=ExtResource("12_nvuwa")]
+position = Vector2(943, 209)
+
+[node name="Paprika" parent="." groups=["Spice"] instance=ExtResource("13_nw353")]
+position = Vector2(819, 213)
+
+[node name="Pasta" parent="." groups=["Pasta"] instance=ExtResource("14_hfm3m")]
+position = Vector2(83, 619)
+script = ExtResource("19_lylwv")
+
+[node name="Ricotta" parent="." groups=["Cheese"] instance=ExtResource("15_v5b5j")]
+position = Vector2(339, 77)
+script = ExtResource("11_2jbf5")
+
+[node name="Salt" parent="." groups=["Spice"] instance=ExtResource("16_yyh63")]
+position = Vector2(947, 89)
+
+[node name="WhiteCheddar" parent="." groups=["Cheese"] instance=ExtResource("17_tehxt")]
+position = Vector2(469, 73)
+script = ExtResource("11_2jbf5")
+
+[node name="Mozzarella" parent="." groups=["Cheese"] instance=ExtResource("11_fj2dv")]
+position = Vector2(205, 68)
+script = ExtResource("11_2jbf5")

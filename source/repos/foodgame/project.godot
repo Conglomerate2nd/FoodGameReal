@@ -19,6 +19,14 @@ config/icon="res://icon.svg"
 
 global="*res://global.gd"
 
+[global_group]
+
+Cheese=""
+Ingredient=""
+Spice=""
+Sauce=""
+Pasta=""
+
 [input]
 
 click={

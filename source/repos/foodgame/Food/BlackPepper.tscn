@@ -1,16 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://byswfomsas0tw"]
+[gd_scene load_steps=4 format=3 uid="uid://dnt0l7g8ptihh"]
 
-[ext_resource type="Script" path="res://object.gd" id="1_3ba4b"]
-[ext_resource type="Texture2D" uid="uid://dfqkghm5hnim7" path="res://icon.svg" id="2_ddpjg"]
+[ext_resource type="Script" path="res://Food/object.gd" id="1_46s4w"]
+[ext_resource type="Texture2D" uid="uid://dot8pqkxvpbhx" path="res://images/blackpepper.jpg" id="2_vkiuy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acfi4"]
-size = Vector2(128, 128)
+size = Vector2(116, 116)
 
 [node name="Object" type="Node2D"]
-script = ExtResource("1_3ba4b")
+script = ExtResource("1_46s4w")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_ddpjg")
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, 0)
+scale = Vector2(0.515556, 0.515556)
+texture = ExtResource("2_vkiuy")
 
 [node name="Area2D" type="Area2D" parent="."]
 
